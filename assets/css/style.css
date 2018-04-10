@@ -10,6 +10,15 @@ body {
     background: lightblue;
 
     }
+#timer {
+    text-align: center;
+    border: 2px solid black;
+    background: lightyellow;
+    margin: 30px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
 
 #questions-remaining {
     text-align: center;

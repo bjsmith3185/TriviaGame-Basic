@@ -20,7 +20,7 @@ var questionsArray = [
 ];
 
 console.log(questionsArray);
-
+console.log(choice);
 function input(x) {
     return document.getElementById(x);
 }
@@ -54,20 +54,47 @@ function renderQuestion() {
     test.innerHTML +=  "<button id='submit-answer' onclick='checkAnswer()'>Submit Answer</button>";
    }
       
-
-    function checkAnswer() {
+   
+   function checkAnswer() {
         choices = document.getElementsByName("choices");
-        for(var i=0; i<choices.length; i++) {
-          if(choices[i].checked) {
-            choice = choices[i].value;
-          }
+        for (var i=0; i<choices.length; i++) {
+            if(choices[i].checked) {
+                choice = choices[i].value;
+                console.log("this is the users array " + choice);
+            }
         }
+     
         if (choice == questionsArray[positionInArray][5]) {
-          correct++;          
-        }
+            correct++;          
+         }
         positionInArray++;
         renderQuestion();
     }
 
     window.addEventListener("load",renderQuestion, false);
 
+
+
+ 
+
+    var seconds = 15;
+
+   
+    function checkTime() {
+       document.getElementById("timer").innerHTML ='Time Left: '  + seconds + 'seconds' ;
+           if(seconds <= 0) {
+           // test.innerHTML = "<h2>You got "+correct+ " of " +questionsArray.length+" questions correct!</h2>";
+              
+                } else {
+                    seconds = seconds - 1;
+                    setTimeout("checkTime()", 1000);
+                }
+    }
+
+ 
+   // setTimeout("checkTime()",1000);
+
+
+
+   // need to make a new array (choiceArray) to populate it as the user goes thru the 
+   // questions. then i can compare this at then end of the timer to the questionsArray for a total
