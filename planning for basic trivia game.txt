@@ -1,0 +1,43 @@
+
+
+                HTML
+    <p> title
+<div make a container to hold the divs below  
+    <div for each queston
+    <div question
+    <form> radio buttons
+(? can this be done with append to match the length of the array?)
+
+----------------------------------------------------------
+
+                javascript
+
+put the functions and arrays in an object?
+
+need an array of arrays to hold the quesions and answers
+
+var questions [
+    ["quesions 1", "what day follows Sunday", "monday", "tuesday", "friday", "monday"],
+    ["quesions 2", "what day follows Sunday", "monday", "tuesday", "friday", "monday"],
+    ["quesions 3", "what day follows Sunday", "monday", "tuesday", "friday", "monday"]
+];
+
+var userAnswers [];
+
+
+
+
+- have an onlclick button to begin the game
+    - onclick starts the timer,
+    - displays the first question from the array
+    - displays the answer selector div with radio buttons
+
+- each onclick of the radio buttons
+    - put the answer into an empty array to hold answers
+    - display the next question from the question array
+
+- when the last answer button is clicked
+    - call a function to compare the answer array and user answer array
+        to give the number of correct, incorrect, unanswered
+    - display a new html to show the results
+    - ? offer a reset button?

@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    }
+
+body {
+    /*background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+
+    background: lightblue;
+
+    }
+
+#questions-remaining {
+    text-align: center;
+    border: 2px solid black;
+    background: lightyellow;
+    margin: 30px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+#question-area {
+    text-align: center;
+    border: 2px solid black;
+    background: lightyellow;
+    margin: 30px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.answers {
+    text-align: center;
+    margin: 5px;
+    }
+
+#submit-answer {
+    text-align: center;
+    background: lightcoral;
+    margin-top: 20px;
+}
+
+    
