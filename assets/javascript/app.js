@@ -5,6 +5,7 @@ var test_status;
 var question;
 var choice; 
 var choices; 
+var choiceArray = [];
 var answerA;
 var answerB;
 var answerC;
@@ -19,8 +20,8 @@ var questionsArray = [
     ["Who has the best customer service?", "Zaxby's", "Chick Fila", "Jack n the Box", "Burger King", "B"]
 ];
 
-console.log(questionsArray);
-console.log(choice);
+console.log("question array " + questionsArray);
+console.log("user choice array " +choiceArray);
 function input(x) {
     return document.getElementById(x);
 }
@@ -57,6 +58,7 @@ function renderQuestion() {
    
    function checkAnswer() {
         choices = document.getElementsByName("choices");
+      // choiceArray.push(positionInArray, this);     how do i populate the array???????
         for (var i=0; i<choices.length; i++) {
             if(choices[i].checked) {
                 choice = choices[i].value;
